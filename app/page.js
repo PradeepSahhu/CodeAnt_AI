@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SignIn, SelfHosted } from "./components/SignIn";
 import Disclaimer from "./components/Disclaimer";
+import LeftComponents from "./components/LeftComponents";
 
 export default function Home() {
   const [isSelfHosted, setIsSelfHosted] = useState(false);
@@ -18,9 +19,11 @@ export default function Home() {
     }
   };
   return (
-    <div className=" grid grid-cols-2 h-screen w-full bg-white font-[inter]">
-      <div className="grid h-full bg-white col-span-1">
-        <div className="h-screen"></div>
+    <div className=" grid grid-cols-2 h-screen w-full bg-white font-[inter] ">
+      <div className="grid  bg-white col-span-1">
+        <div className="w-full h-full">
+          <LeftComponents />
+        </div>
       </div>
       {/* right layer */}
       <div className="col-span-1 grid bg-[#FAFAFA]">
