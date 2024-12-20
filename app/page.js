@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import SignIn from "./components/SignIn";
+import { SignIn, SelfHosted } from "./components/SignIn";
 import Disclaimer from "./components/Disclaimer";
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </div>
           {/* end of top view  */}
-          <SignIn />
+          {isSelfHosted != true ? <SignIn /> : <SelfHosted />}
         </div>
         <div className="flex justify-center">
           <Disclaimer />

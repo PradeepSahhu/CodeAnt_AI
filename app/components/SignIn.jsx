@@ -7,6 +7,15 @@ const SignInOptions = ({ name, logo }) => {
   );
 };
 
+const SelfHosted = () => {
+  return (
+    <div className="flex flex-col justify-center items-center border-[1px] border-[#E9EAEB] font-[inter] gap-y-[16px] py-5 rounded-xl">
+      <SignInOptions name={"Self Hosted GitLab"} logo={"./image_1.png"} />
+      <SignInOptions name={"Sign in with SSO"} logo={"./key.png"} />
+    </div>
+  );
+};
+
 const SignIn = () => {
   return (
     <div className="flex flex-col justify-center items-center border-[1px] border-[#E9EAEB] font-[inter] gap-y-[16px] py-5 rounded-xl">
@@ -18,4 +27,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export { SignIn, SelfHosted };
