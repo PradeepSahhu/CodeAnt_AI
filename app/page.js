@@ -1,23 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import SignIn from "./components/SignIn";
+import Disclaimer from "./components/Disclaimer";
 
 export default function Home() {
   const [isSelfHosted, setIsSelfHosted] = useState(false);
 
-  const handleClick = () => {
-    console.log("The status of the isSelfHosted is : " + isSelfHosted);
-    setIsSelfHosted(!isSelfHosted);
+  const handleClick = (event) => {
+    // console.log("The status of the isSelfHosted is : " + isSelfHosted);
+    console.log(event);
+    const { name } = event;
+    if (name == "saas") {
+      setIsSelfHosted(false);
+    } else {
+      setIsSelfHosted(true);
+    }
   };
   return (
-    <div className=" grid grid-cols-2 h-screen w-screen bg-white font-[inter]">
+    <div className=" grid grid-cols-2 h-screen w-full bg-white font-[inter]">
       <div className="grid h-full bg-white col-span-1">
         <div className="h-screen"></div>
       </div>
       {/* right layer */}
-      <div className="col-span-1 grid bg-[#FAFAFA]  ">
+      <div className="col-span-1 grid bg-[#FAFAFA]">
         {/* main container */}
-        <div className="border-gray-600 rounded-md  my-[100px] mx-[20px] bg-white ">
+        <div className="border-gray-600 rounded-lg align-center mx-[60px] bg-white my-[80px]">
           {/* top view */}
           <div className="flex flex-col justify-center rounded-lg border-[#D5D7DA]-600 border-[1px] px-[36px] py-[24px]">
             <div className="bg-[#FFFFFF]  justify-center flex flex-col text-center gap-y-[36px] mb-[24px]">
@@ -38,7 +46,8 @@ export default function Home() {
                   className={`bg-${isSelfHosted ? "[#FAFAFA]" : "[#1570EF]"} 
                     text-${isSelfHosted ? "gray-600" : "[#FAFAFA]"}
                     col-span-1  px-[14px] py-[16px] rounded-lg font-bold`}
-                  onClick={handleClick}
+                  onClick={(e) => handleClick(e.target)}
+                  name="saas"
                 >
                   SAAS
                 </button>
@@ -48,7 +57,8 @@ export default function Home() {
                   } col-span-1 text-${
                     isSelfHosted ? "[#FAFAFA]" : "gray-600"
                   } rounded-lg font-bold`}
-                  onClick={handleClick}
+                  onClick={(e) => handleClick(e.target)}
+                  name="selfhosted"
                 >
                   Self Hosted
                 </button>
@@ -56,7 +66,10 @@ export default function Home() {
             </div>
           </div>
           {/* end of top view  */}
-          <div className=""></div>
+          <SignIn />
+        </div>
+        <div className="flex justify-center">
+          <Disclaimer />
         </div>
       </div>
     </div>
