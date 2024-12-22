@@ -23,7 +23,7 @@ export default function Home() {
     <div className=" grid grid-cols-2 h-screen w-full bg-white font-[inter] ">
       <div className="grid  bg-white col-span-1 items-center justify-center">
         {/* top component */}
-        <div className="drop-shadow-2xl shadow-black shadow-2xl rounded-2xl border-[1px] border-[#E9EAEB] text-[#081735] w-[447px] mx-9 px-9 py-4">
+        <div className="drop-shadow-2xl  shadow-lg shadow-black -top-[100px] rounded-2xl border-[1px] border-[#E9EAEB] text-[#081735] w-[447px] mx-9 px-9 py-4 z-10 relative overflow-hidden">
           <div className=" flex border-b-[1px] border-[#E9EAEB] pr-10 py-5">
             <img className="w-[28px] h-[31px] mx-2" src="./logo.png"></img>
             <p className="font-[700] text-[18px] leading-[27px] ">
@@ -41,7 +41,7 @@ export default function Home() {
         {/* bottom component */}
 
         {/* top-full -left-1/2 -bottom-5 */}
-        <div className="drop-shadow-2xl shadow-2xl shadow-black text-[#081735] font-[inter] rounded-xl w-[270px] h-[164px] absolute top-[460px] left-[400px] z-10">
+        <div className="drop-shadow-2xl shadow-2xl shadow-black text-[#081735] font-[inter] rounded-xl w-[270px] h-[164px] absolute top-[360px] left-[350px] z-20 bg-white">
           <div className="px-10 py-5 flex gap-5">
             <div className="flex flex-col gap-5">
               <img className="w-[56px] h-[57px]" src="./circle.png" />
