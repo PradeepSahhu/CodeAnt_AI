@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SignIn, SelfHosted } from "./components/SignIn";
 import Disclaimer from "./components/Disclaimer";
 import LeftComponents from "./components/LeftComponents";
-import Options from "./components/LeftComponents/TopCardComponents";
+import { Options } from "./components/LeftComponents/TopCardComponents";
 
 export default function Home() {
   const [isSelfHosted, setIsSelfHosted] = useState(false);
@@ -113,7 +113,11 @@ export default function Home() {
             </div>
           </div>
           {/* end of top view  */}
-          {isSelfHosted != true ? <SignIn /> : <SelfHosted />}
+          {isSelfHosted != true ? (
+            <SignIn Destination={`./Repository`} />
+          ) : (
+            <SelfHosted />
+          )}
         </div>
         <div className="flex justify-center">
           <Disclaimer />
