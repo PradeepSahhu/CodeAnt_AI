@@ -25,6 +25,39 @@ const NavItem = ({ imgSrc, message, selected }) => {
   );
 };
 
+const RepositoryItem = ({
+  repoName,
+  repoTech,
+  repoSize,
+  repoVisibility,
+  repoUpdate,
+}) => {
+  return (
+    <div className=" h-[108px] border-[1px] border-[#E9EAEB] rounded-lg flex items-center ml-5">
+      <div className="flex flex-col gap-2 ">
+        <div className="flex gap-5 mx-3">
+          <p className="font-bold">{repoName}</p>
+          <button className="bg-[#EFF8FF] rounded-xl text-[#175CD3] px-2 py-1 text-[10px] border-[1px] border-[#B2DDFF]">
+            {repoVisibility}
+          </button>
+        </div>
+        <div className="flex gap-10 mx-3">
+          <div className="flex gap-2 items-center">
+            <p>{repoTech}</p>
+            <img className="w-[8px] h-[8px]" src="./Repository/dot.png" />
+          </div>
+          <div className="flex items-center gap-2">
+            <img src="./Repository/database.png" />
+            <p>{repoSize}</p>
+          </div>
+
+          <p>Updated {repoUpdate} day ago</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const RepositoryDashboard = () => {
   return (
     <div className="grid grid-cols-12  bg-[#E9EAEB] text-[#181D27]">
@@ -114,6 +147,52 @@ const RepositoryDashboard = () => {
               />
             </button>
           </div>
+        </div>
+        {/* from here add the sections */}
+
+        <div>
+          <RepositoryItem
+            repoName={`design-system`}
+            repoTech={`React`}
+            repoSize={`7320 KB`}
+            repoVisibility={`Public`}
+            repoUpdate={`1`}
+          />
+          <RepositoryItem
+            repoName={`codeant-ci-app`}
+            repoTech={`Javascript`}
+            repoSize={`5871 KB`}
+            repoVisibility={`Private`}
+            repoUpdate={`2`}
+          />
+          <RepositoryItem
+            repoName={`analytics-dashboard`}
+            repoTech={`Python`}
+            repoSize={`4521 KB`}
+            repoVisibility={`Public`}
+            repoUpdate={`5`}
+          />
+          <RepositoryItem
+            repoName={`mobile-app`}
+            repoTech={`Swift`}
+            repoSize={`3096 KB`}
+            repoVisibility={`Public`}
+            repoUpdate={`3`}
+          />
+          <RepositoryItem
+            repoName={`e-commerce-platform`}
+            repoTech={`Java`}
+            repoSize={`6210 KB`}
+            repoVisibility={`Private`}
+            repoUpdate={`6`}
+          />
+          <RepositoryItem
+            repoName={`blog-website`}
+            repoTech={`HTML/CSS`}
+            repoSize={`1876 KB`}
+            repoVisibility={`Public`}
+            repoUpdate={`4`}
+          />
         </div>
       </div>
     </div>
