@@ -64,6 +64,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <img
+          className="absolute bottom-0 left-0 w-[284px] h-[319px]"
+          src="./Subtract.png"
+        />
       </div>
       {/* right layer */}
       <div className="col-span-1 grid bg-[#FAFAFA]">
