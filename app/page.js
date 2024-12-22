@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SignIn, SelfHosted } from "./components/SignIn";
 import Disclaimer from "./components/Disclaimer";
 import LeftComponents from "./components/LeftComponents";
+import Options from "./components/LeftComponents/TopCardComponents";
 
 export default function Home() {
   const [isSelfHosted, setIsSelfHosted] = useState(false);
@@ -20,9 +21,48 @@ export default function Home() {
   };
   return (
     <div className=" grid grid-cols-2 h-screen w-full bg-white font-[inter] ">
-      <div className="grid  bg-white col-span-1">
-        <div className="w-full h-full">
-          <LeftComponents />
+      <div className="grid  bg-white col-span-1 items-center justify-center">
+        {/* top component */}
+        <div className="drop-shadow-2xl shadow-black shadow-2xl rounded-2xl border-[1px] border-[#E9EAEB] text-[#081735] w-[447px] mx-9 px-9 py-4">
+          <div className=" flex border-b-[1px] border-[#E9EAEB] pr-10 py-5">
+            <img className="w-[28px] h-[31px] mx-2" src="./logo.png"></img>
+            <p className="font-[700] text-[18px] leading-[27px] ">
+              AI to Detect & Autofix Bad Code
+            </p>
+          </div>
+          {/* <hr className="border-[1px] border-[#E9EAEB]" /> */}
+
+          <div className="flex justify-between">
+            <Options main={"30+"} message={"Language Support"} />
+            <Options main={"10K+"} message={"Developers"} />
+            <Options main={"100K+"} message={"Hours Saved"} />
+          </div>
+        </div>
+        {/* bottom component */}
+
+        {/* top-full -left-1/2 -bottom-5 */}
+        <div className="drop-shadow-2xl shadow-2xl shadow-black text-[#081735] font-[inter] rounded-xl w-[270px] h-[164px] absolute top-[460px] left-[400px] z-10">
+          <div className="px-10 py-5 flex gap-5">
+            <div className="flex flex-col gap-5">
+              <img className="w-[56px] h-[57px]" src="./circle.png" />
+              <div className=" flex-col gap-3 inline-block">
+                <p className="font-[700] text-[14px] leading-[20px]">
+                  Issues Fixed
+                </p>
+                <p className="font-[700] text-[32px] leading-[32px]">500K+</p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center">
+                <img src="./arrow.png" />
+                <p className="font-[700] text-[#0049C6]">14%</p>
+              </div>
+              <div className="whitespace-nowrap">
+                <p className="">This week</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* right layer */}
