@@ -4,12 +4,20 @@ const NavItem = ({ imgSrc, message, selected }) => {
   console.log(selected);
   return (
     <a
-      className={`flex px-6 py-2 rounded-md mx-3 gap-4 bg-${
-        selected ? "[blue-800]" : "white"
-      }`}
+      className={`flex px-6 py-3 rounded-md mx-3 gap-4 ${
+        selected ? "bg-[#1570EF]" : "bg-white"
+      }
+        text-${selected ? "white" : "black"}
+        font-[600]
+        
+      `}
+      href=""
     >
-      <img className="invert w-[20px] h-[18px]" src={`${imgSrc}`} />
-      <p>{`${message}`}</p>
+      <img
+        className={`${selected ? "" : "invert"} w-[20px] h-[18px]`}
+        src={`${imgSrc}`}
+      />
+      <p className="text-sm">{`${message}`}</p>
     </a>
   );
 };
@@ -17,20 +25,21 @@ const NavItem = ({ imgSrc, message, selected }) => {
 const RepositoryDashboard = () => {
   return (
     <div className="grid grid-cols-12  bg-white text-[#181D27]">
-      <div className="h-screen col-span-2 bg-white border-r-[1px] border-gray-500">
-        <nav className="flex flex-col justify-center">
+      {/* left navigation bar */}
+      <div className="h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
+        <nav className="flex flex-col justify-center gap-1">
           {/* heading and logo */}
-          <div>
-            <div className="flex gap-2 p-3">
+          <div className="mt-2 flex flex-col gap-2">
+            <div className="flex gap-4 p-3">
               <img src="./logo_small.png" />
               <p className="font-Satoshi  text-[24px]">CodeAnt AI</p>
             </div>
 
             <select
               name="userDetails"
-              className="pr-14 pl-3 py-2 border-gray-500 border-[1px] rounded-md focus:outline-none  focus:ring-0"
+              className="pr-14 mx-4 py-2 border-[#E9EAEB] border-[1px] rounded-md focus:outline-none  focus:ring-0"
             >
-              <option value="username">Pradeep Sahu</option>
+              <option value="username">Pradeep Sahu...</option>
               <option value="Profile">Profile</option>
             </select>
           </div>
@@ -40,9 +49,15 @@ const RepositoryDashboard = () => {
               message={`Repositories`}
               selected={`${true}`}
             />
-            <NavItem imgSrc={`./home.png`} message={`Repositories`} />
-            <NavItem imgSrc={`./home.png`} message={`Repositories`} />
-            <NavItem imgSrc={`./home.png`} message={`Repositories`} />
+            <NavItem
+              imgSrc={`./Repository/code.png`}
+              message={`AI Code Review`}
+            />
+            <NavItem
+              imgSrc={`./Repository/cloud.png`}
+              message={`Cloud Security`}
+            />
+            <NavItem imgSrc={`./Repository/book.png`} message={`How to Use`} />
           </div>
         </nav>
       </div>

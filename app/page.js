@@ -90,8 +90,8 @@ export default function Home() {
             <div className="border-[1px] border-[#E9EAEB] rounded-md">
               <div className="grid grid-cols-2 ">
                 <button
-                  className={`bg-${isSelfHosted ? "[#FAFAFA]" : "[#1570EF]"} 
-                    text-${isSelfHosted ? "gray-600" : "[#FAFAFA]"}
+                  className={`${isSelfHosted ? "bg-[#FAFAFA]" : "bg-[#1570EF]"} 
+                    ${isSelfHosted ? "text-gray-600" : "text-[#FAFAFA]"}
                     col-span-1  px-[14px] py-[16px] rounded-lg font-bold`}
                   onClick={(e) => handleClick(e.target)}
                   name="saas"
