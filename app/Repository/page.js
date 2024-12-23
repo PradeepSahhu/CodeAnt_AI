@@ -111,7 +111,7 @@ const RepositoryDashboard = () => {
       </div>
       <div className="bg-[#E9EAEB] col-span-10 font-[inter] h-screen ">
         <div className=" mx-5 bg-white border-[1px] border-[#E9EAEB] rounded-md mt-4  py-3">
-          <div className="flex justify-between mx-2 rounded-2xl">
+          <div className="flex justify-between mx-4 rounded-2xl">
             <div className="pb-2 px-1 ">
               <p className="font-[600] text-2xl  text-[#181D27]">
                 Repositories
