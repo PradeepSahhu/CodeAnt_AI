@@ -33,15 +33,15 @@ const RepositoryItem = ({
   repoUpdate,
 }) => {
   return (
-    <div className=" h-[108px] border-[1px] border-[#E9EAEB] rounded-lg flex items-center ml-5">
+    <div className=" h-[108px] border-[1px] border-[#E9EAEB] rounded-lg flex items-center mx-5 bg-white">
       <div className="flex flex-col gap-2 ">
-        <div className="flex gap-5 mx-3">
+        <div className="flex gap-5 mx-5">
           <p className="font-bold">{repoName}</p>
           <button className="bg-[#EFF8FF] rounded-xl text-[#175CD3] px-2 py-1 text-[10px] border-[1px] border-[#B2DDFF]">
             {repoVisibility}
           </button>
         </div>
-        <div className="flex gap-10 mx-3">
+        <div className="flex gap-10 mx-5">
           <div className="flex gap-2 items-center">
             <p>{repoTech}</p>
             <img className="w-[8px] h-[8px]" src="./Repository/dot.png" />
@@ -60,7 +60,7 @@ const RepositoryItem = ({
 
 const RepositoryDashboard = () => {
   return (
-    <div className="grid grid-cols-12  bg-[#E9EAEB] text-[#181D27]">
+    <div className="grid grid-cols-12  bg-white text-[#181D27]">
       {/* left navigation bar */}
       <div className="h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
         <nav className="flex flex-col gap-1 h-full justify-between">
@@ -109,8 +109,8 @@ const RepositoryDashboard = () => {
           </div>
         </nav>
       </div>
-      <div className="bg-white col-span-10 font-[inter] h-screen">
-        <div className=" border-[5px] border-[#E9EAEB] my-2 py-3">
+      <div className="bg-[#E9EAEB] col-span-10 font-[inter] h-screen ">
+        <div className=" mx-5 bg-white border-[1px] border-[#E9EAEB] rounded-md mt-4  py-3">
           <div className="flex justify-between mx-2 rounded-2xl">
             <div className="pb-2 px-1 ">
               <p className="font-[600] text-2xl  text-[#181D27]">
@@ -138,7 +138,7 @@ const RepositoryDashboard = () => {
             </div>
           </div>
           <div className="mx-3">
-            <button className="flex items-center border-[1px] border-[#E(EAEB)] p-1 rounded-lg ">
+            <button className="flex items-center border-[1px] border-[#E(EAEB)] p-1 rounded-lg drop-shadow-md shadow-[#E9EAEB] shadow bg-white">
               <img className="px-2" src="./Repository/search.png" />
               <input
                 className="px-3 py-1 pr-24 focus:outline-none "
