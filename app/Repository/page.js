@@ -87,7 +87,7 @@ const RepositoryDashboard = () => {
               </div>
             </div>
             <hr
-              className={`border-[1px] border-gray-300 sm:hidden ${
+              className={`border-[1px] border-gray-300 sm:hidden mt-3 ${
                 isMenuOpen ? "hidden" : "block"
               }`}
             ></hr>
@@ -163,7 +163,7 @@ const RepositoryDashboard = () => {
                 />
                 Refresh All
               </button>
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-md flex items-center gap-x-3">
+              <button className="bg-blue-600 text-white sm:px-5 sm:py-2 p-3 rounded-md flex items-center gap-x-3">
                 <img
                   className="sm:w-[20px] sm:h-[20px]"
                   src="./Repository/plus.png"
