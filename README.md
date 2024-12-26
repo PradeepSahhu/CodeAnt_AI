@@ -76,4 +76,4 @@ This project is licensed under the MIT License.
 
 ## This application is also deployed on vercel.
 
-Link :
+Link : https://codeant-ai-plum.vercel.app/
