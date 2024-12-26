@@ -60,7 +60,7 @@ const RepositoryItem = ({
 
 const RepositoryDashboard = () => {
   return (
-    <div className="grid grid-cols-12  bg-white text-[#181D27]">
+    <div className="sm:grid grid-cols-12  bg-white text-[#181D27]">
       {/* left navigation bar */}
       <div className="h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
         <nav className="flex flex-col gap-1 h-full justify-between">
@@ -113,14 +113,14 @@ const RepositoryDashboard = () => {
         <div className=" mx-5 bg-white border-[1px] border-[#E9EAEB] rounded-md mt-4  py-3">
           <div className="flex justify-between mx-4 rounded-2xl">
             <div className="pb-2 px-1 ">
-              <p className="font-[600] text-2xl  text-[#181D27]">
+              <p className="font-[600] sm:text-2xl  text-[#181D27]">
                 Repositories
               </p>
               <p className="text-sm leading-[20px] font-extralight ">
                 33 total repositories
               </p>
             </div>
-            <div className="flex items-center gap-3 mx-2">
+            <div className="sm:flex items-center gap-3 mx-2">
               <button className="bg-white text-black px-3 py-2 rounded-md border-[1px] border-[#E9EAEB] flex items-center gap-x-3">
                 <img
                   className="w-[20px] h-[20px]"
