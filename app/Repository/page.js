@@ -32,7 +32,9 @@ const RepositoryItem = ({
   repoUpdate,
 }) => {
   return (
-    <div className=" h-[108px] border-[1px] border-[#E9EAEB] rounded-lg flex items-center mx-5 bg-white">
+    <div
+      className={` h-[108px] border-[1px] border-[#E9EAEB] rounded-lg flex items-center mx-5 bg-white `}
+    >
       <div className="flex flex-col gap-2 ">
         <div className="flex gap-5 mx-5">
           <p className="font-bold">{repoName}</p>
@@ -105,7 +107,7 @@ const RepositoryDashboard = () => {
             </div>
 
             <div
-              className={`z-20 flex flex-col gap-3 mt-4 ${
+              className={`z-20 flex flex-col gap-3 mt-4  transition-all duration-300 ${
                 isMenuOpen ? "block" : "hidden sm:block"
               }`}
             >
@@ -183,7 +185,7 @@ const RepositoryDashboard = () => {
         </div>
         {/* from here add the sections */}
 
-        <div className={`${isMenuOpen ? "bg-[#E9EAEB]" : ""}`}>
+        <div className={``}>
           <RepositoryItem
             repoName={`design-system`}
             repoTech={`React`}

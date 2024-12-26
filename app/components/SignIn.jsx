@@ -29,9 +29,21 @@ const SignIn = ({ Destination }) => {
         logo={"./icon.png"}
         dest={`${Destination}`}
       />
-      <SignInOptions name={"Sign in with Bitbucket"} logo={"./icon_2.png"} />
-      <SignInOptions name={"Sign in with Azure Devops"} logo={"./image.png"} />
-      <SignInOptions name={"Sign in with GitLab"} logo={"./image_1.png"} />
+      <SignInOptions
+        name={"Sign in with Bitbucket"}
+        logo={"./icon_2.png"}
+        dest={`${Destination}`}
+      />
+      <SignInOptions
+        name={"Sign in with Azure Devops"}
+        logo={"./image.png"}
+        dest={`${Destination}`}
+      />
+      <SignInOptions
+        name={"Sign in with GitLab"}
+        logo={"./image_1.png"}
+        dest={`${Destination}`}
+      />
     </div>
   );
 };
