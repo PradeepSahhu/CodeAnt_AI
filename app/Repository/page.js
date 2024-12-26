@@ -1,7 +1,6 @@
 "use client";
-
+import { useState } from "react";
 const NavItem = ({ imgSrc, message, selected }) => {
-  console.log(selected);
   return (
     <a
       className={`flex px-6 py-3 rounded-md mx-3 gap-4 ${
@@ -59,29 +58,57 @@ const RepositoryItem = ({
 };
 
 const RepositoryDashboard = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="sm:grid grid-cols-12  bg-white text-[#181D27]">
       {/* left navigation bar */}
       <div className="sm:h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
-        <nav className="flex flex-col gap-1 sm:h-full justify-between">
+        <nav className="sm:flex flex-col gap-1 sm:h-full justify-between">
           {/* heading and logo */}
-          <div className="mt-2 flex flex-col gap-2 justify-between">
-            <div className="flex gap-4 p-3">
-              <img src="./logo_small.png" />
-              <p className="font-Satoshi  text-[24px]">CodeAnt AI</p>
+          <div className="mt-2 sm:flex sm:flex-col gap-2 sm:justify-between ">
+            <div className="flex items-center justify-between">
+              <div className="flex gap-4 p-3 items-center">
+                <img src="./logo_small.png" alt="logo" />
+                <p className="font-Satoshi  text-[24px]">CodeAnt AI</p>
+              </div>
+              <div className="relative mr-5">
+                <button
+                  className="sm:hidden block text-2xl"
+                  onClick={() => setIsMenuOpen((prev) => !prev)}
+                >
+                  <img
+                    src={`./Repository/Navigation/${
+                      isMenuOpen ? "close.png" : "bars.png"
+                    }`}
+                  />
+                </button>
+              </div>
             </div>
+            <hr
+              className={`border-[1px] border-gray-300 sm:hidden ${
+                isMenuOpen ? "hidden" : "block"
+              }`}
+            ></hr>
 
-            <div>
+            <div
+              className={` bg-white pr-72 sm:pr-0 ${
+                isMenuOpen ? "block" : "hidden sm:block"
+              }`}
+            >
               <select
                 name="userDetails"
-                className="pr-14 mx-4 py-2 border-[#E9EAEB] border-[1px] rounded-md focus:outline-none  focus:ring-0"
+                className="sm:pr-14 mx-4 pr-52 py-4 sm:py-3 bg-white border-[#E9EAEB] border-[1px] rounded-md focus:outline-none  focus:ring-0 z-20 "
               >
                 <option value="username">Pradeep Sahu...</option>
                 <option value="Profile">Profile</option>
               </select>
             </div>
 
-            <div className="flex flex-col gap-3 mt-4">
+            <div
+              className={`z-20 flex flex-col gap-3 mt-4 ${
+                isMenuOpen ? "block" : "hidden sm:block"
+              }`}
+            >
               <NavItem
                 imgSrc={`./home.png`}
                 message={`Repositories`}
@@ -103,7 +130,11 @@ const RepositoryDashboard = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-end mb-5">
+          <div
+            className={`z-20 flex flex-col justify-end mb-5 ${
+              isMenuOpen ? "block" : "hidden sm:block"
+            }`}
+          >
             <NavItem imgSrc={`./Repository/Frame.png`} message={`Support`} />
             <NavItem imgSrc={`./Repository/sign-out.png`} message={`Logout`} />
           </div>
@@ -111,16 +142,18 @@ const RepositoryDashboard = () => {
       </div>
       <div className="bg-[#E9EAEB] col-span-10 font-[inter] h-screen ">
         <div className=" mx-5 bg-white border-[1px] border-[#E9EAEB] rounded-md mt-4  py-3">
-          <div className="flex justify-between mx-4 rounded-2xl">
-            <div className="pb-2 px-1 ">
-              <p className="font-[600] sm:text-2xl  text-[#181D27]">
+          <div className="sm:flex justify-between mx-4 rounded-2xl">
+            <div className={`pb-2 px-1`}>
+              <p
+                className={`font-[600] text-[32px] sm:text-2xl  text-[#181D27]`}
+              >
                 Repositories
               </p>
-              <p className="text-sm leading-[20px] font-extralight ">
+              <p className="text-[20px] my-2 sm:text-md leading-[12px] font-extralight ">
                 33 total repositories
               </p>
             </div>
-            <div className="sm:flex items-center gap-3 mx-2">
+            <div className="flex items-center gap-3 mx-2">
               <button className="bg-white text-black px-3 py-2 rounded-md border-[1px] border-[#E9EAEB] flex items-center gap-x-3">
                 <img
                   className="w-[20px] h-[20px]"
@@ -130,18 +163,18 @@ const RepositoryDashboard = () => {
               </button>
               <button className="bg-blue-600 text-white px-5 py-2 rounded-md flex items-center gap-x-3">
                 <img
-                  className="w-[20px] h-[20px]"
+                  className="sm:w-[20px] sm:h-[20px]"
                   src="./Repository/plus.png"
                 />
                 <p>Add Repository</p>
               </button>
             </div>
           </div>
-          <div className="mx-3">
-            <button className="flex items-center border-[1px] border-[#E(EAEB)] p-1 rounded-lg drop-shadow-md shadow-[#E9EAEB] shadow bg-white">
+          <div className="mx-3 mt-3 sm:mt-0">
+            <button className="flex items-center border-[1px] border-[#E9EAEB)] p-1 rounded-lg drop-shadow-md shadow-[#E9EAEB] shadow bg-white">
               <img className="px-2" src="./Repository/search.png" />
               <input
-                className="px-3 py-1 pr-24 focus:outline-none "
+                className="px-3 py-1 pr-24 focus:outline-none bg-white"
                 type="search"
                 placeholder="Search Repositories"
               />
@@ -150,7 +183,7 @@ const RepositoryDashboard = () => {
         </div>
         {/* from here add the sections */}
 
-        <div>
+        <div className={`${isMenuOpen ? "bg-[#E9EAEB]" : ""}`}>
           <RepositoryItem
             repoName={`design-system`}
             repoTech={`React`}
