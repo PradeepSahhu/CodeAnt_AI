@@ -42,14 +42,14 @@ const RepositoryItem = ({
             {repoVisibility}
           </button>
         </div>
-        <div className="flex gap-5 sm:gap-10 mx-5">
+        <div className="flex gap-3 sm:gap-10 mx-5">
           <div className="flex gap-2 items-center">
             <p>{repoTech}</p>
             <img className="w-[8px] h-[8px]" src="./Repository/dot.png" />
           </div>
           <div className="flex items-center gap-2">
             <img src="./Repository/database.png" />
-            <p className="text-sm sm:text-md">{repoSize}</p>
+            <p className="text-[14px] sm:text-md">{repoSize}</p>
           </div>
 
           <p className="text-[15px] sm:text-md">Updated {repoUpdate} day ago</p>
