@@ -156,14 +156,14 @@ const RepositoryDashboard = () => {
               </p>
             </div>
             <div className="flex items-center gap-3 mx-2">
-              <button className="bg-white text-black px-3 py-2 rounded-md border-[1px] border-[#E9EAEB] flex items-center gap-x-3">
+              <button className="bg-white text-black sm:px-3 sm:py-2 whitespace-nowrap py-3 px-5 rounded-md border-[1px] border-[#E9EAEB] flex items-center gap-x-3">
                 <img
                   className="w-[20px] h-[20px]"
                   src="./Repository/Frame_2.png"
                 />
                 Refresh All
               </button>
-              <button className="bg-blue-600 text-white sm:px-5 sm:py-2 p-3 rounded-md flex items-center gap-x-3">
+              <button className="bg-blue-600 text-white sm:px-5 sm:py-2 py-3 px-5 whitespace-nowrap rounded-md flex items-center gap-x-3">
                 <img
                   className="sm:w-[20px] sm:h-[20px]"
                   src="./Repository/plus.png"
