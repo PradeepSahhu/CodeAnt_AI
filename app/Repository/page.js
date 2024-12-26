@@ -99,7 +99,7 @@ const RepositoryDashboard = () => {
             >
               <select
                 name="userDetails"
-                className="sm:pr-14 mx-4 pr-52 py-4 sm:py-3 bg-white border-[#E9EAEB] border-[1px] rounded-md focus:outline-none  focus:ring-0 z-20 "
+                className="sm:pr-14 mx-4 pr-60 py-4 sm:py-3 bg-white border-[#E9EAEB] border-[1px] rounded-md focus:outline-none  focus:ring-0 z-20 "
               >
                 <option value="username">Pradeep Sahu...</option>
                 <option value="Profile">Profile</option>
