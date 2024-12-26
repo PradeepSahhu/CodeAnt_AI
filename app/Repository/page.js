@@ -41,17 +41,17 @@ const RepositoryItem = ({
             {repoVisibility}
           </button>
         </div>
-        <div className="flex gap-10 mx-5">
+        <div className="flex gap-5 sm:gap-10 mx-5">
           <div className="flex gap-2 items-center">
             <p>{repoTech}</p>
             <img className="w-[8px] h-[8px]" src="./Repository/dot.png" />
           </div>
           <div className="flex items-center gap-2">
             <img src="./Repository/database.png" />
-            <p>{repoSize}</p>
+            <p className="text-sm sm:text-md">{repoSize}</p>
           </div>
 
-          <p>Updated {repoUpdate} day ago</p>
+          <p className="text-[15px] sm:text-md">Updated {repoUpdate} day ago</p>
         </div>
       </div>
     </div>
@@ -62,8 +62,8 @@ const RepositoryDashboard = () => {
   return (
     <div className="sm:grid grid-cols-12  bg-white text-[#181D27]">
       {/* left navigation bar */}
-      <div className="h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
-        <nav className="flex flex-col gap-1 h-full justify-between">
+      <div className="sm:h-screen col-span-2 bg-white border-r-[1px] border-[#E9EAEB]">
+        <nav className="flex flex-col gap-1 sm:h-full justify-between">
           {/* heading and logo */}
           <div className="mt-2 flex flex-col gap-2 justify-between">
             <div className="flex gap-4 p-3">
