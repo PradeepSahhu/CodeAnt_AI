@@ -31,7 +31,7 @@ const SignIn = ({ Destination }) => {
       />
       <SignInOptions
         name={"Sign in with Bitbucket"}
-        logo={"./icon_2.png"}
+        logo={"./bucket.png"}
         dest={`${Destination}`}
       />
       <SignInOptions
