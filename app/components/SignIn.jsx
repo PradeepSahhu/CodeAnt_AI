@@ -26,7 +26,7 @@ const SignIn = ({ Destination }) => {
     <div className="flex flex-col justify-center items-center font-[inter] gap-y-[16px] py-5 rounded-xl">
       <SignInOptions
         name={"Sign in with Github"}
-        logo={"./icon.png"}
+        logo={"./github.png"}
         dest={`${Destination}`}
       />
       <SignInOptions
